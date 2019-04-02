@@ -1,0 +1,69 @@
+Multichar_Symbols
+
+%<n%> ! Noun
+
+%<abs%> ! Absolutive
+
+%> ! Morpheme boundary
+
+%{T%}
+
+LEXICON Root
+
+Nouns ;
+
+LEXICON N_TL
+
+%<n%>: ABS_TL ;
+
+LEXICON ABS_TL
+
+# ;
+%<abs%> : %>tl # ;
+
+LEXICON N_TLI
+
+%<n%>: ABS_TLI ;
+
+LEXICON ABS_TLI
+
+# ;
+%<abs%> : %>tli # ;
+
+LEXICON N_IN
+
+%<n%>: ABS_IN ;
+
+LEXICON ABS_IN
+
+%<abs%> : %>in # ;
+
+LEXICON N_NULL
+
+%<n%>: ABS_NULL ;
+
+LEXICON ABS_NULL
+
+# ;
+
+LEXICON Nouns
+
+mexica : mexica N_TL ; ! person from Mexica
+cihua : cihua N_TL ; ! woman
+tlaca : tlaca N_TL ; ! person
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+oquich : oquich N_TLI ; ! man
+toch : toch N_TLI ; ! rabbit
+
+pil : pil N_TLI ; ! child/nobleman
+cal : cal N_TLI ; ! house
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+mich : mich N_IN ; ! fish
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+chichi : chichi N_NULL ; ! dog
