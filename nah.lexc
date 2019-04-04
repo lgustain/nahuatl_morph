@@ -6,7 +6,16 @@ Multichar_Symbols
 
 %<v%> ! Verb
 
+%<inf%> ! Infinitive
+
 %<pres%> !Present Tense
+
+@U.Subject.sg1@
+@U.Subject.sg2@
+@U.Subject.sg3@
+@U.Subject.pl1@
+@U.Subject.pl2@
+@U.Subject.pl3@
 
 %> ! Morpheme boundary
 
@@ -17,7 +26,7 @@ Multichar_Symbols
 LEXICON Root
 
 Nouns ;
-Tenses ;
+VPrefixes ;
 
 LEXICON N_TL
 
@@ -77,8 +86,4 @@ chichi:chichi N_NULL ; ! dog
 
 LEXICON Tenses
 
-%<pres%>: Subs ;
-
-LEXICON Subs
-
-
+%<inf%>: Verbs ;
