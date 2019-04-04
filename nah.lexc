@@ -48,22 +48,22 @@ LEXICON ABS_NULL
 
 LEXICON Nouns
 
-mexica : mexica N_TL ; ! person from Mexica
-cihua : cihua N_TL ; ! woman
-tlaca : tlaca N_TL ; ! person
+mexica:mexica N_TL ; ! person from Mexica
+cihua:cihua N_TL ; ! woman
+tlaca:tlaca N_TL ; ! person
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-oquich : oquich N_TLI ; ! man
-toch : toch N_TLI ; ! rabbit
+oquich:oquich N_TLI ; ! man
+toch:toch N_TLI ; ! rabbit
 
-pil : pil N_TLI ; ! child/nobleman
-cal : cal N_TLI ; ! house
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-mich : mich N_IN ; ! fish
+pil:pil N_TLI ; ! child/nobleman
+cal:cal N_TLI ; ! house
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-chichi : chichi N_NULL ; ! dog
+mich:mich N_IN ; ! fish
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+chichi:chichi N_NULL ; ! dog
