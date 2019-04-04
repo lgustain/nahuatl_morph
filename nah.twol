@@ -6,8 +6,8 @@ A E I O P T Qu C Tz Ch Tl Cu Uc M N S Z X Y Hu Uh L
 
 Rules
 
-! "Remove morpheme boundary"
-! %>:0 <=> _ ;
+"Remove morpheme boundary"
+%>:0 <=> _ ;
 
 "Remove t from absolutive in stems ending in l"
-t:0 <=> l%> _ li ;
+t:0 <=> l %>: _ l i ;
