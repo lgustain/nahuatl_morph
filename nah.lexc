@@ -4,13 +4,20 @@ Multichar_Symbols
 
 %<abs%> ! Absolutive
 
+%<v%> ! Verb
+
+%<pres%> !Present Tense
+
 %> ! Morpheme boundary
 
 %{T%}
+%{i%}
+%{m%}
 
 LEXICON Root
 
 Nouns ;
+Tenses ;
 
 LEXICON N_TL
 
@@ -67,3 +74,11 @@ mich:mich N_IN ; ! fish
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 chichi:chichi N_NULL ; ! dog
+
+LEXICON Tenses
+
+%<pres%>: Subs ;
+
+LEXICON Subs
+
+
