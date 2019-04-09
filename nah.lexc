@@ -119,7 +119,9 @@ LEXICON Subj_Agr
 
 LEXICON V_Suffs
 
-
+%<pass%>:lo # ;
+%<pass%>:hua # ;
+ # ;
 
 LEXICON Nouns
 
