@@ -6,6 +6,7 @@ Multichar_Symbols
 
 %<v%> ! Verb
 
+%<tv%> ! Transitive Verb
 
 %<pres%> !Present Tense
 
@@ -63,16 +64,16 @@ LEXICON ABS_NULL
 
 LEXICON SubjPrefixes
 
-@U.Subject.sg1@:@U.Subject.sg1@ni 
-@U.Subject.sg2@:@U.Subject.sg2@ti
-@U.Subject.sg3@
-@U.Subject.pl1@
-@U.Subject.pl2@
-@U.Subject.pl3@
+@U.Subject.sg1@:@U.Subject.sg1@n%{i%} Verbs ;
+@U.Subject.sg2@:@U.Subject.sg2@t%{i%} Verbs ;
+@U.Subject.sg3@:@U.Subject.sg3@ Verbs ;
+@U.Subject.pl1@:@U.Subject.pl1@t%{i%} Verbs ;
+@U.Subject.pl2@:@U.Subject.pl2@a%{m%} Verbs ;
+@U.Subject.pl3@ Verbs ;
 
 LEXICON Tenses
 
-%<pres%>
+%<pres%> 
 %<pret%>
 %<futr%>
 
@@ -100,6 +101,10 @@ chichi:chichi N_NULL ; ! dog
 
 LEXICON Verbs
 
-miqui:miqui V_SUFF ; ! to die
-cochi:cochi V_SUFF ; ! to sleep
+miqui:miqui V_AGR ; ! to die
+cochi:cochi V_AGR ; ! to sleep
+
+LEXICON TV
+
+itta:itta SUBJ_AGR ; ! to see
 
