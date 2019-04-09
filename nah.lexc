@@ -6,7 +6,6 @@ Multichar_Symbols
 
 %<v%> ! Verb
 
-%<inf%> ! Infinitive
 
 %<pres%> !Present Tense
 
@@ -26,7 +25,7 @@ Multichar_Symbols
 LEXICON Root
 
 Nouns ;
-VPrefixes ;
+SubjPrefixes ;
 
 LEXICON N_TL
 
@@ -62,6 +61,21 @@ LEXICON ABS_NULL
 
 # ;
 
+LEXICON SubjPrefixes
+
+@U.Subject.sg1@:@U.Subject.sg1@ni 
+@U.Subject.sg2@:@U.Subject.sg2@ti
+@U.Subject.sg3@
+@U.Subject.pl1@
+@U.Subject.pl2@
+@U.Subject.pl3@
+
+LEXICON Tenses
+
+%<pres%>
+%<pret%>
+%<futr%>
+
 LEXICON Nouns
 
 mexica:mexica N_TL ; ! person from Mexica
@@ -84,6 +98,8 @@ mich:mich N_IN ; ! fish
 
 chichi:chichi N_NULL ; ! dog
 
-LEXICON Tenses
+LEXICON Verbs
 
-%<inf%>: Verbs ;
+miqui:miqui V_SUFF ; ! to die
+cochi:cochi V_SUFF ; ! to sleep
+
