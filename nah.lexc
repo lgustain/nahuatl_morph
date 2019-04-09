@@ -10,12 +10,34 @@ Multichar_Symbols
 
 %<pres%> !Present Tense
 
+%<s_sg1%>   ! Subject, first person singular
+%<s_sg2%>   ! Subject, second person singular
+%<s_sg3%>   ! Subject, third person singular
+%<s_pl1%>   ! Subject, first person plural
+%<s_pl2%>   ! Subject, second person plural
+%<s_pl3%>   ! Subject, third person plural
+
+%<o_sg1%>   ! Object, first person singular
+%<o_sg2%>   ! Object, second person singular
+%<o_sg3%>   ! Object, third person singular
+%<o_pl1%>   ! Object, first person plural
+%<o_pl2%>   ! Object, second person plural
+%<o_pl3%>   ! Object, third person plural
+
 @U.Subject.sg1@
 @U.Subject.sg2@
 @U.Subject.sg3@
 @U.Subject.pl1@
 @U.Subject.pl2@
 @U.Subject.pl3@
+
+@U.Object.sg1@
+@U.Object.sg2@
+@U.Object.sg3@
+@U.Object.pl1@
+@U.Object.pl2@
+@U.Object.pl3@
+
 
 %> ! Morpheme boundary
 
