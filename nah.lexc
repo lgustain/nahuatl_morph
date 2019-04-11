@@ -91,18 +91,18 @@ LEXICON ABS_NULL
 
 LEXICON Subj_Pref
 
-@U.Subject.sg1@:@U.Subject.sg1@n%{i%}%> Verbs ;
-@U.Subject.sg2@:@U.Subject.sg2@t%{i%}%> Verbs ;
+@U.Subject.sg1@:@U.Subject.sg1@%>n%{i%}%> Verbs ;
+@U.Subject.sg2@:@U.Subject.sg2@%>t%{i%}%> Verbs ;
 @U.Subject.sg3@:@U.Subject.sg3@%> Verbs ;
-@U.Subject.pl1@:@U.Subject.pl1@t%{i%}%> Verbs ;
-@U.Subject.pl2@:@U.Subject.pl2@a%{m%}%> Verbs ;
+@U.Subject.pl1@:@U.Subject.pl1@%>t%{i%}%> Verbs ;
+@U.Subject.pl2@:@U.Subject.pl2@%>a%{m%}%> Verbs ;
 @U.Subject.pl3@:@U.Subject.pl3@%> Verbs ;
 
-@U.Subject.sg1@:@U.Subject.sg1@n%{i%}%> Obj_Pref ;
-@U.Subject.sg2@:@U.Subject.sg2@t%{i%}%> Obj_Pref ;
+@U.Subject.sg1@:@U.Subject.sg1@%>n%{i%}%> Obj_Pref ;
+@U.Subject.sg2@:@U.Subject.sg2@%>t%{i%}%> Obj_Pref ;
 @U.Subject.sg3@:@U.Subject.sg3@%> Obj_Pref ;
-@U.Subject.pl1@:@U.Subject.pl1@t%{i%}%> Obj_Pref ;
-@U.Subject.pl2@:@U.Subject.pl2@a%{m%}%> Obj_Pref ;
+@U.Subject.pl1@:@U.Subject.pl1@%>t%{i%}%> Obj_Pref ;
+@U.Subject.pl2@:@U.Subject.pl2@%>a%{m%}%> Obj_Pref ;
 @U.Subject.pl3@:@U.Subject.pl3@%> Obj_Pref ;
 
 LEXICON Obj_Pref
