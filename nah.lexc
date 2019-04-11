@@ -153,9 +153,28 @@ chichi:chichi N_NULL ; ! dog
 
 LEXICON Verbs
 
-miqui:miqui VTenses ; ! to die
+
+amiqui:amiqui VTenses ; ! to be thirsty
+calaqui:calaqui VTenses ; ! to enter
+choca:choca VTenses ; ! to cry, to weep
 cochi:cochi VTenses ; ! to sleep
 cualneci:cualneci VTenses ; ! to look beautiful
+cuica:cuica VTenses ; ! to sing
+eco:eco VTenses ; ! to arrive
+ehua:ehua VTenses ; ! to depart, to leave
+iza:iza VTenses ; ! to wake up
+mayana:mayana VTenses ; ! to be hungry
+miqui:miqui VTenses ; ! to die
+nemi:nemi: VTenses ; ! to live
+olini:olini VTenses ; ! to move
+quiza:quiza VTenses ; ! to emerge, to pass by
+temo:temo VTenses ; ! to come down, to descend
+tlami:tlami VTenses ; ! to end, to finish
+tlatla:tlatla VTenses ; ! to burn, to be on fire
+tlacati:tlacati VTenses ; ! to be born
+tlahuana:tlahuana Vtenses ; ! to get drunk
+tzinti:tzinti VTenses ; ! to start, to begin
+
 
 LEXICON TV
 
