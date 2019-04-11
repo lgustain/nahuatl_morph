@@ -10,6 +10,8 @@ Multichar_Symbols
 
 %<pres%> !Present Tense
 
+%<futr%>
+
 %<pass%> !Passive voice
 
 %<hon%> !Honorific
@@ -111,7 +113,7 @@ LEXICON VTenses
 
 %<pres%>:%> Subj_Agr ; 
 %<pret%>
-%<futr%>
+%<futr%>:%>z%> Subj_Agr ;
 
 LEXICON Subj_Agr
 
