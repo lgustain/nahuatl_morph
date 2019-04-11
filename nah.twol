@@ -14,7 +14,8 @@ A E I O P T Qu C Tz Ch Tl Cu Uc M N S Z X Y Hu Uh L
 Sets
 
 Vowel = a e i o A E I O
-FVows = a i A I
+FVows = a i
+EndVow = o i
 
 Rules
 
@@ -30,4 +31,7 @@ Rules
 "Prefix nasal assimilation to stem cns place"
 %{m%}:m <=> %> a _ %>: [m | p] ;
 
-"Last vowel drops for stem 3 (future) if stem ends in two vowels"
+"Nonsurface a in base 3 stem for future"
+%{a%}:0 <=> EndVow _ %> z %>
+
+
