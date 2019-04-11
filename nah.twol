@@ -5,7 +5,7 @@ A E I O P T Qu C Tz Ch Tl Cu Uc M N S Z X Y Hu Uh L
 %{m%}:m %{m%}:n
 %{i%}:i %{i%}:0
 %{l%}:l %{l%}:0
-%{t%}:t %{t%}:t
+%{t%}:t %{t%}:0
 ;
 
 Rules
