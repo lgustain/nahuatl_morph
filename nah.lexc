@@ -45,7 +45,7 @@ Multichar_Symbols
 
 %> ! Morpheme boundary
 
-%{T%}
+%{t%}
 %{i%}
 %{m%}
 %{l%}
