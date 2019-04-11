@@ -2,6 +2,8 @@ Alphabet
 
 a e i o p t qu c tz ch tl cu uc m n s z x y hu uh l
 A E I O P T Qu C Tz Ch Tl Cu Uc M N S Z X Y Hu Uh L
+%{m%}:m %{m%}:n
+%{i%}:i %{i%}:0
 ;
 
 Rules
