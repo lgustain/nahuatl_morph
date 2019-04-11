@@ -10,6 +10,10 @@ Multichar_Symbols
 
 %<pres%> !Present Tense
 
+%<pass%> !Passive voice
+
+%<hon%> !Honorific
+
 %<s_sg1%>   ! Subject, first person singular
 %<s_sg2%>   ! Subject, second person singular
 %<s_sg3%>   ! Subject, third person singular
@@ -44,6 +48,7 @@ Multichar_Symbols
 %{T%}
 %{i%}
 %{m%}
+%{l%}
 
 LEXICON Root
 
@@ -121,6 +126,7 @@ LEXICON V_Suffs
 
 %<pass%>:lo # ;
 %<pass%>:hua # ;
+%<hon%>:%{l%}tia # ;
  # ;
 
 LEXICON Nouns
@@ -149,6 +155,7 @@ LEXICON Verbs
 
 miqui:miqui VTenses ; ! to die
 cochi:cochi VTenses ; ! to sleep
+cualneci:cualneci VTenses ; ! to look beautiful
 
 LEXICON TV
 
