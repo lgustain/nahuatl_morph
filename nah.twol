@@ -2,8 +2,11 @@ Alphabet
 
 a e i o p t qu c tz ch tl cu uc m n s z x y hu uh l
 A E I O P T Qu C Tz Ch Tl Cu Uc M N S Z X Y Hu Uh L
-%{m%}:m %{m%}:n
+%{a%}:a %{a%}:0
+%{e%}:e %{e%}:0
 %{i%}:i %{i%}:0
+%{o%}:o %{o%}:0
+%{m%}:m %{m%}:n
 %{l%}:l %{l%}:0
 %{t%}:t %{t%}:0
 ;
@@ -26,3 +29,5 @@ Rules
 
 "Prefix nasal assimilation to stem cns place"
 %{m%}:m <=> %> a _ %>: [m | p] ;
+
+"Last vowel drops for stem 3 (future) if stem ends in two vowels"
