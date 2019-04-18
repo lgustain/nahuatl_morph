@@ -13,7 +13,7 @@ Multichar_Symbols
 %<futr%>
 
 %<pass%> !Passive voice
-
+%<ia_ip%> !inanimate impersonal
 %<hon%> !Honorific
 
 %<dir_toward%> ! directional, toward the speaker
@@ -34,12 +34,17 @@ Multichar_Symbols
 %<o_pl2%>   ! Object, second person plural
 %<o_pl3%>   ! Object, third person plural
 
+%<to_be%> !irregular verb handled alone; to be somewhere, not to be someone or something
+%<to_go%> ! irregular
+%<to_come%> ! irregular
+
 @U.Subject.sg1@
 @U.Subject.sg2@
 @U.Subject.sg3@
 @U.Subject.pl1@
 @U.Subject.pl2@
 @U.Subject.pl3@
+@U.Subject.ia_ip@
 
 @R.Subject.sg1@
 @R.Subject.sg2@
@@ -47,6 +52,7 @@ Multichar_Symbols
 @R.Subject.pl1@
 @R.Subject.pl2@
 @R.Subject.pl3@
+@R.Subject.ia_ip@
 
 @U.Object.sg1@
 @U.Object.sg2@
@@ -65,6 +71,8 @@ Multichar_Symbols
 
 %> ! Morpheme boundary
 
+%{a%}
+%{h%}
 %{t%}
 %{i%}
 %{m%}
@@ -75,6 +83,7 @@ LEXICON Root
 
 Nouns ;
 Subj_Pref ;
+Irreg_V ;
 Other ;
 
 LEXICON N_TL
@@ -119,6 +128,7 @@ LEXICON Subj_Pref
 @U.Subject.pl1@ : @U.Subject.pl1@%>t%{i%}%> Verbs ;
 @U.Subject.pl2@ : @U.Subject.pl2@%>a%{m%}%> Verbs ;
 @U.Subject.pl3@ : @U.Subject.pl3@%> Verbs ;
+@U.Subject.ia_ip@ : @U.Subject.ia_ip@%>tla Verbs ;
 
 @U.Subject.sg1@ : @U.Subject.sg1@%>n%{i%}%> Obj_Pref ;
 @U.Subject.sg2@ : @U.Subject.sg2@%>t%{i%}%> Obj_Pref ;
@@ -156,6 +166,7 @@ LEXICON IVSubj_Agr
 @R.Subject.pl1@%<s_pl1%>:@R.Subject.pl1@ V_Suffs ;
 @R.Subject.pl2@%<s_pl2%>:@R.Subject.pl2@ V_Suffs ;
 @R.Subject.pl3@%<s_pl3%>:@R.Subject.pl3@ V_Suffs ;
+@R.Subject.ia_ip@%<ia_ip%>:@R.Subject.ia_ip@ V_Suffs ;
 
 LEXICON TV_Tenses
 
@@ -223,6 +234,7 @@ tonalli:tonalli # ; ! day, heat of sun, luck
 atl:atl # ; ! water
 iztatl:iztatl # ; ! salt
 kilo:kilo # ; ! kilo
+altepetl:altepetl # ; !city, town
 
 ! xonacatl is onionand occurs pretty frequently, not sure where you wanted to put it -LG
 ! tomin is money
@@ -287,6 +299,39 @@ tlamati:tlamat%{i%} TV_Tenses ; ! to know
 tlani:tlan%{i%} TV_Tenses ; ! to win
 yocoya:yocoya TV_Tenses ; ! to make
 
+LEXICON Irreg_V
+
+%<to_be%>:  BE_CONJ ;
+%<to_go%>: GO_CONJ ;
+
+LEXICON BE_CONJ
+
+%<pres%>%<s_sg1%>: nica%{h%} # ;
+%<pres%>%<s_sg2%>: tica%{h%} # ;
+%<pres%>%<s_sg3%>: ca%{h%} # ;
+%<pres%>%<s_pl1%>: ticate%{h%} # ;
+%<pres%>%<s_pl2%>: ancate%{h%} # ;
+%<pres%>%<s_pl3%>: cate%{h%} # ;
+
+LEXICON GO_CONJ
+
+%<pres%>%<s_sg1%>: niyauh # ;
+%<pres%>%<s_sg2%>: tiyauh # ;
+%<pres%>%<s_sg3%>: yauh # ;
+%<pres%>%<s_pl1%>: tihui%{h%} # ;
+%<pres%>%<s_pl2%>: anhui%{h%} # ;
+%<pres%>%<s_pl3%>: hui%{h%} # ;
+
+LEXICON COME_CONJ
+
+%<pres%>%<s_sg1%>: nihuitz # ;
+%<pres%>%<s_sg2%>: tihuitz # ;
+%<pres%>%<s_sg3%>: huitz # ;
+%<pres%>%<s_pl1%>: tihuitze%{h%} # ;
+%<pres%>%<s_pl2%>: anhuitze%{h%} # ;
+%<pres%>%<s_pl3%>: huitze%{h%} # ;
+
+
 LEXICON Other
 
 in:in # ; ! article, in a way
@@ -330,3 +375,4 @@ de:de # ; ! of
 inon:inon # ; ! this
 axcan:axcan # ; ! now
 campa:campa # ; ! where
+tepitzin:tepitzin # ; ! a little bit
