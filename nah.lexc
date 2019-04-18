@@ -89,6 +89,7 @@ Other ;
 LEXICON N_TL
 
 %<n%>: ABS_TL ;
+%<n%>: PLURAL ;
 
 LEXICON ABS_TL
 
@@ -98,6 +99,7 @@ LEXICON ABS_TL
 LEXICON N_TLI
 
 %<n%>: ABS_TLI ;
+%<n%>: PLURAL ;
 
 LEXICON ABS_TLI
 
@@ -107,6 +109,7 @@ LEXICON ABS_TLI
 LEXICON N_IN
 
 %<n%>: ABS_IN ;
+%<n%>: PLURAL ;
 
 LEXICON ABS_IN
 
@@ -115,6 +118,7 @@ LEXICON ABS_IN
 LEXICON N_NULL
 
 %<n%> : ABS_NULL ;
+%<n%>: PLURAL ;
 
 LEXICON ABS_NULL
 
@@ -209,6 +213,12 @@ LEXICON Nouns
 mexica:mexica N_TL ; ! person from Mexica
 cihua:cihua N_TL ; ! woman
 tlaca:tlaca N_TL ; ! person
+xonaca:xonaca N_TL ; ! onion
+xihui:xihui N_TL ; ! turquiose, year, comet, herb
+yehua:yehua N_TL ; ! he, she, it
+a:a N_TL ; ! water
+izta:izta N_TL ; ! salt
+altepe:altepe N_TL ; ! city, town
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -217,30 +227,21 @@ toch:toch N_TLI ; ! rabbit
 
 pil:pil N_TLI ; ! child/nobleman
 cal:cal N_TLI ; ! house
+tonal:tonal N_TLI ; ! day, heat of sun, luck
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 mich:mich N_IN ; ! fish
+tom:tom # ; ! money
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 chichi:chichi N_NULL ; ! dog
+kilo:kilo N_NULL ; ! kilo
 
-xonacatl:xonacatl # ; ! onion
-tomin:tomin # ; ! money
-xihuitl:xihuitl # ; ! turquiose, year, comet, herb
-yehuatl:yehuatl # ; ! he, she, it
-tonalli:tonalli # ; ! day, heat of sun, luck
-atl:atl # ; ! water
-iztatl:iztatl # ; ! salt
-kilo:kilo # ; ! kilo
-altepetl:altepetl # ; !city, town
 
-! xonacatl is onionand occurs pretty frequently, not sure where you wanted to put it -LG
-! tomin is money
-! xihuitl is turquoise, year, comet, herb
 ! yehuatl is he, she, it
-! tonalli is day, heat of sun, luck
+
 
 LEXICON Verbs
 
