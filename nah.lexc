@@ -140,6 +140,7 @@ LEXICON DIR
 
 %<dir_toward%> : hual%> TransV ;
 %<dir_away%> : on%> TransV ;
+ TransV ;
 
 
 LEXICON IVTenses
