@@ -150,8 +150,12 @@ mich:mich N_IN ; ! fish
 
 chichi:chichi N_NULL ; ! dog
 
+! xonacatl is onionand occurs pretty frequently, not sure where you wanted to put it -LG
+! tomin is money
+
 LEXICON Verbs
 
+ahci:ahci VTenses ; ! to arrive
 amiqui:amiqui VTenses ; ! to be thirsty
 calaqui:calaqui VTenses ; ! to enter
 choca:choca VTenses ; ! to cry, to weep
@@ -163,8 +167,11 @@ ehua:ehua VTenses ; ! to depart, to leave
 iza:iza VTenses ; ! to wake up
 mayana:mayana VTenses ; ! to be hungry
 miqui:miqui VTenses ; ! to die
+mixihui:mixihui VTenses ; ! to give birth
+nehnemi:nehnemi VTenses ; ! to walk
 nemi:nemi VTenses ; ! to live
 olini:olini VTenses ; ! to move
+pozoni:pozoni VTenses ; ! to boil
 quiza:quiza VTenses ; ! to emerge, to pass by
 temo:temo VTenses ; ! to come down, to descend
 tlami:tlami VTenses ; ! to end, to finish
@@ -172,8 +179,34 @@ tlatla:tlatla VTenses ; ! to burn, to be on fire
 tlacati:tlacati VTenses ; ! to be born
 tlahuana:tlahuana VTenses ; ! to get drunk
 tzinti:tzinti VTenses ; ! to start, to begin
+yauh:yauh VTenses ; ! to go
 
 LEXICON TV
 
+cempohua:cempohua Subj_Agr ; ! to add
+chia:chi%{a%} Subj_Agr ; ! to wait
+chihua:chihua Subj_Agr ; ! to make
+cohua:cohua Subj_Agr ; ! to buy
+cotona:coton%{a%} Subj_Agr ; ! to cut
+cua:cua Sub_Agr ; ! to eat
+cui:cui Subj_Agr ; ! to take
 itta:itta Subj_Agr ; ! to see
+nenquixtia:nenquixti%{a%} Subj_Agr ; ! to waste
+nequi:nequi Subj_Agr ; ! to want
+paca:paca Subj_Agr ; ! to wash
+pia:pi%{a%} Subj_Agr ; ! to have
+pozonia:pozoni%{a%} Subj_Agr ; ! to cook/boil
+quimiloa:quimilo%{a%} Subj_Agr ; ! to wrap
+teci:tec%{i%} Subj_Agr ; ! to grind
+tema:te%{m%}%{a%} Subj_Agr ; ! to put
+tequi:tequi Subj_Agr ; ! to cut
+tlahcuiloa:tlahcuilo%{a%} Subj_Agr ; ! to write
+tlalia:tlali%{a%} Subj_Agr ; ! to put
+tlamati:tlamat%{i%} Subj_Agr ; ! to know
+tlani:tlan%{i%} Subj_Agr ; ! to win
+xima:xi%{m%}%{a%} Subj_Agr ; to cut
+yocoya:yocoya Subj_Agr ; ! to make
 
+LEXICON RV
+
+momachtia:momachti%{a%} Subj_Agr ! to study
