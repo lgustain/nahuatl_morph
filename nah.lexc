@@ -75,6 +75,7 @@ LEXICON Root
 
 Nouns ;
 Subj_Pref ;
+Other ;
 
 LEXICON N_TL
 
@@ -130,7 +131,7 @@ LEXICON Obj_Pref
 
 @U.Object.sg1@ : @U.Object.sg1@nech%> DIR ;
 @U.Object.sg2@ : @U.Object.sg2@mitz%> DIR ;
-@U.Object.sg3@ : @U.Object.sg3@%{c%}%> DIR ;
+@U.Object.sg3@ : @U.Object.sg3@c%> DIR ;
 @U.Object.pl1@ : @U.Object.pl1@tech%> DIR ;
 @U.Object.pl2@ : @U.Object.pl2@mo%> DIR ;
 @U.Object.pl3@ : @U.Object.pl3@mo%> DIR ;
@@ -139,6 +140,7 @@ LEXICON DIR
 
 %<dir_toward%> : hual%> TransV ;
 %<dir_away%> : on%> TransV ;
+
 
 LEXICON IVTenses
 
@@ -212,6 +214,15 @@ mich:mich N_IN ; ! fish
 
 chichi:chichi N_NULL ; ! dog
 
+xonacatl:xonacatl # ; ! onion
+tomin:tomin # ; ! money
+xihuitl:xihuitl # ; ! turquiose, year, comet, herb
+yehuatl:yehuatl # ; ! he, she, it
+tonalli:tonalli # ; ! day, heat of sun, luck
+atl:atl # ; ! water
+iztatl:iztatl # ; ! salt
+kilo:kilo # ; ! kilo
+
 ! xonacatl is onionand occurs pretty frequently, not sure where you wanted to put it -LG
 ! tomin is money
 ! xihuitl is turquoise, year, comet, herb
@@ -246,7 +257,7 @@ yauh:yauh IVTenses ; ! to go
 
 LEXICON TransV
 
-%<v%> %<tv%> : TV ;
+%<v%>%<tv%> :  TV ;
 
 LEXICON TV
 
@@ -259,6 +270,7 @@ cua:cua TV_Tenses ; ! to eat
 cui:cui TV_Tenses ; ! to take
 itta:itta TV_Tenses ; ! to see
 !!!!!!! mochihua 
+mochihua:mochihua # ; ! it happens, becomes. fix but by itself adds a lot of coverage
 nenquixtia:nenquixti%{a%} TV_Tenses ; ! to waste
 nequi:nequi TV_Tenses ; ! to want
 paca:paca TV_Tenses ; ! to wash
@@ -273,3 +285,47 @@ tlalia:tlali%{a%} TV_Tenses ; ! to put
 tlamati:tlamat%{i%} TV_Tenses ; ! to know
 tlani:tlan%{i%} TV_Tenses ; ! to win
 yocoya:yocoya TV_Tenses ; ! to make
+
+LEXICON Other
+
+in:in # ; ! article, in a way
+ihuan:ihuan # ; ! and
+ye:ye # ; ! already
+auh:auh # ; ! and
+ica:ica # ; ! because of him
+zan:zan # ; ! only
+ic:ic # ; ! by means of
+ipan:ipan # ; ! in it, on it
+huel:huel # ; ! truly, much
+niman:niman # ; ! extremely
+amo:amo # ; ! no
+ahmo:ahmo # ; ! no, not
+ce:ce # ; ! article, "a"
+inic:inic # ; ! for this person, for this reason
+ma:ma # ; ! let, may (before verb)
+ihcuac:ihcuac # ; ! at that time, when/while
+cualli:cualli # ; ! good
+ompa:ompa # ; ! here, there
+tlen:tlen # ; ! what
+inin:inin # ; ! this
+oc:oc # ; ! still
+oncan:oncan # ; ! here, there, at that time
+nican:nican # ; ! here
+itlan:itlan # ; ! near it, next to it
+ome:ome # ; ! two, both, couple
+cenca:cenca # ; ! very
+itech:itech # ; ! in, on, during
+ixquich:ixquich # ; ! all, enough
+quenin:quenin # ; ! how
+mah:mah # ; ! that, which
+hueyi:hueyi # ; ! large
+huan:huan # ; ! you
+!!!!!!!!!!!!!!!!!!!!! jennifer probably include this?
+ipampa:ipama # ; ! on behalf of, why, because
+miac:miac # ; ! much, a lot
+ahnozo:ahnozo # ; ! or (i think)
+tla:tla # ; ! if
+de:de # ; ! of
+inon:inon # ; ! this
+axcan:axcan # ; ! now
+campa:campa # ; ! where
