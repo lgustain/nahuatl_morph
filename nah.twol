@@ -1,7 +1,7 @@
 Alphabet
 
 a e i o h p t qu c tz ch tl cu uc m n s z x y hu uh l
-A E I O h P T Qu C Tz Ch Tl Cu Uc M N S Z X Y Hu Uh L
+A E I O H P T Qu C Tz Ch Tl Cu Uc M N S Z X Y Hu Uh L
 %{a%}:a %{a%}:0
 %{e%}:e %{e%}:0
 %{i%}:i %{i%}:0

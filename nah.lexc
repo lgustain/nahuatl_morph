@@ -12,6 +12,8 @@ Multichar_Symbols
 
 %<futr%>
 
+%<hon%> ! honorific
+
 %<pass%> !Passive voice
 %<ia_ip%> !inanimate impersonal
 %<hon%> !Honorific
@@ -124,6 +126,19 @@ LEXICON ABS_NULL
 
 # ;
 
+LEXICON PLURAL
+
+# ;
+%<pl%>:%>h # ; ! after vowels
+%<pl%>:%>me # ; ! after both
+%<pl%>:%>tin # ; ! after consonants
+%<pl%>:%>huan # ; ! possessive form
+
+LEXICON Honorific ! have to figure out how to implement this
+
+%<hon%>:%>tzin ABS_TLI ; ! honorific/diminutive suffix
+%<hon%>:%>tzin # ;
+
 LEXICON Subj_Pref
 
 @U.Subject.sg1@ : @U.Subject.sg1@%>n%{i%}%> Verbs ;
@@ -214,20 +229,34 @@ mexica:mexica N_TL ; ! person from Mexica
 cihua:cihua N_TL ; ! woman
 tlaca:tlaca N_TL ; ! person
 xonaca:xonaca N_TL ; ! onion
-xihui:xihui N_TL ; ! turquiose, year, comet, herb
+xihui:xihui N_TL ; ! turquoise, year, comet, herb
 yehua:yehua N_TL ; ! he, she, it
 a:a N_TL ; ! water
 izta:izta N_TL ; ! salt
 altepe:altepe N_TL ; ! city, town
+xochi:xochi N_TL ; ! flower
+cuahui:cuahui N_TL ; ! tree, wood, stick
+ama:ama N_TL ; ! paper, amate
+tle:tle N_TL ; ! fire
+xitoma:xitoma N_TL ; ! tomato
+naca:naca N_TL ; ! meat
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 oquich:oquich N_TLI ; ! man
 toch:toch N_TLI ; ! rabbit
+noch:noch N_TLI ; ! prickly pear
+metz:metz N_TLI ; ! moon, month
+tex:tex N_TLI ; ! mass
+oh:oh N_TLI ; ! street
 
 pil:pil N_TLI ; ! child/nobleman
 cal:cal N_TLI ; ! house
 tonal:tonal N_TLI ; ! day, heat of sun, luck
+chil:chil N_TLI ; ! chili pepper
+nohpal:nohpal N_TLI ; ! prickly pear cactus
+tlacual:tlacual N_TLI ; ! food
+tlal:tlal N_TLI ; ! earth, land
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
