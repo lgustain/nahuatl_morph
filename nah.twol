@@ -11,27 +11,21 @@ A E I O P T Qu C Tz Ch Tl Cu Uc M N S Z X Y Hu Uh L
 %{t%}:t %{t%}:0
 ;
 
-Sets
-
-Vowel = a e i o A E I O
-FVows = a i
-EndVow = o i
-
 Rules
 
 "Remove morpheme boundary"
 %>:0 <=> _ ;
 
 "Remove t from absolutive in stems ending in l"
-%{t%}:0 <=> l %>: _ l i ;
+%{t%}:0 <=> l %>: _ [li] ;
 
-"Remove i from 2nd person sg and 1st person pl when stem starts with a vowel
-%{i%}:0 <=> %>: t _ %>: Vowel: ;
+"Remove i from 2nd person sg and 1st person pl when stem starts with a vowel"
+%{i%}:0 <=> %>: t _ %>: [a|e|i|o] ;
 
 "Prefix nasal assimilation to stem cns place"
-%{m%}:m <=> %> a _ %>: [m | p] ;
+%{m%}:m <=> %> a _ %>: [m|p] ;
 
 "Nonsurface a in base 3 stem for future"
-%{a%}:0 <=> EndVow _ %> z %>
+%{a%}:0 <=> [i|o] _ %> z %> ;
 
 
