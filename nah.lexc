@@ -37,6 +37,13 @@ Multichar_Symbols
 @U.Subject.pl2@
 @U.Subject.pl3@
 
+@R.Subject.sg1@
+@R.Subject.sg2@
+@R.Subject.sg3@
+@R.Subject.pl1@
+@R.Subject.pl2@
+@R.Subject.pl3@
+
 @U.Object.sg1@
 @U.Object.sg2@
 @U.Object.sg3@
@@ -55,7 +62,7 @@ Multichar_Symbols
 LEXICON Root
 
 Nouns ;
-SubjPrefixes ;
+Subj_Pref ;
 
 LEXICON N_TL
 
@@ -85,7 +92,7 @@ LEXICON ABS_IN
 
 LEXICON N_NULL
 
-%<n%>: ABS_NULL ;
+%<n%> : ABS_NULL ;
 
 LEXICON ABS_NULL
 
@@ -93,42 +100,32 @@ LEXICON ABS_NULL
 
 LEXICON Subj_Pref
 
-@U.Subject.sg1@:@U.Subject.sg1@%>n%{i%}%> Verbs ;
-@U.Subject.sg2@:@U.Subject.sg2@%>t%{i%}%> Verbs ;
-@U.Subject.sg3@:@U.Subject.sg3@%> Verbs ;
-@U.Subject.pl1@:@U.Subject.pl1@%>t%{i%}%> Verbs ;
-@U.Subject.pl2@:@U.Subject.pl2@%>a%{m%}%> Verbs ;
-@U.Subject.pl3@:@U.Subject.pl3@%> Verbs ;
-
-@U.Subject.sg1@:@U.Subject.sg1@%>n%{i%}%> Obj_Pref ;
-@U.Subject.sg2@:@U.Subject.sg2@%>t%{i%}%> Obj_Pref ;
-@U.Subject.sg3@:@U.Subject.sg3@%> Obj_Pref ;
-@U.Subject.pl1@:@U.Subject.pl1@%>t%{i%}%> Obj_Pref ;
-@U.Subject.pl2@:@U.Subject.pl2@%>a%{m%}%> Obj_Pref ;
-@U.Subject.pl3@:@U.Subject.pl3@%> Obj_Pref ;
-
-LEXICON Obj_Pref
+@U.Subject.sg1@ : @U.Subject.sg1@%>n%{i%}%> Verbs ;
+@U.Subject.sg2@ : @U.Subject.sg2@%>t%{i%}%> Verbs ;
+@U.Subject.sg3@ : @U.Subject.sg3@%> Verbs ;
+@U.Subject.pl1@ : @U.Subject.pl1@%>t%{i%}%> Verbs ;
+@U.Subject.pl2@ : @U.Subject.pl2@%>a%{m%}%> Verbs ;
+@U.Subject.pl3@ : @U.Subject.pl3@%> Verbs ;
 
 LEXICON VTenses
 
-%<pres%>:%> Subj_Agr ; 
-%<pret%>
-%<futr%>:%>z%> Subj_Agr ;
+%<pres%> : %> Subj_Agr ; 
+%<futr%> : %>z%> Subj_Agr ;
 
 LEXICON Subj_Agr
 
-@U.Subject.sg1@%<s_sg1%>:@U.Subject.sg1@ V_Suffs ;
-@U.Subject.sg2@%<s_sg2%>:@U.Subject.sg2@ V_Suffs ;
-@U.Subject.sg3@%<s_sg3%>:@U.Subject.sg3@ V_Suffs ;
-@U.Subject.pl1@%<s_pl1%>:@U.Subject.pl1@ V_Suffs ;
-@U.Subject.pl2@%<s_pl2%>:@U.Subject.pl2@ V_Suffs ;
-@U.Subject.pl3@%<s_pl3%>:@U.Subject.pl3@ V_Suffs ;
+@R.Subject.sg1@%<s_sg1%>:@R.Subject.sg1@ V_Suffs ;
+@R.Subject.sg2@%<s_sg2%>:@R.Subject.sg2@ V_Suffs ;
+@R.Subject.sg3@%<s_sg3%>:@R.Subject.sg3@ V_Suffs ;
+@R.Subject.pl1@%<s_pl1%>:@R.Subject.pl1@ V_Suffs ;
+@R.Subject.pl2@%<s_pl2%>:@R.Subject.pl2@ V_Suffs ;
+@R.Subject.pl3@%<s_pl3%>:@R.Subject.pl3@ V_Suffs ;
 
 LEXICON V_Suffs
 
-%<pass%>:lo # ;
-%<pass%>:hua # ;
-%<hon%>:%{l%}tia # ;
+%<pass%> : lo # ;
+%<pass%> : hua # ;
+%<hon%> : %{l%}tia # ;
  # ;
 
 LEXICON Nouns
@@ -155,7 +152,6 @@ chichi:chichi N_NULL ; ! dog
 
 LEXICON Verbs
 
-
 amiqui:amiqui VTenses ; ! to be thirsty
 calaqui:calaqui VTenses ; ! to enter
 choca:choca VTenses ; ! to cry, to weep
@@ -167,18 +163,17 @@ ehua:ehua VTenses ; ! to depart, to leave
 iza:iza VTenses ; ! to wake up
 mayana:mayana VTenses ; ! to be hungry
 miqui:miqui VTenses ; ! to die
-nemi:nemi: VTenses ; ! to live
+nemi:nemi VTenses ; ! to live
 olini:olini VTenses ; ! to move
 quiza:quiza VTenses ; ! to emerge, to pass by
 temo:temo VTenses ; ! to come down, to descend
 tlami:tlami VTenses ; ! to end, to finish
 tlatla:tlatla VTenses ; ! to burn, to be on fire
 tlacati:tlacati VTenses ; ! to be born
-tlahuana:tlahuana Vtenses ; ! to get drunk
+tlahuana:tlahuana VTenses ; ! to get drunk
 tzinti:tzinti VTenses ; ! to start, to begin
-
 
 LEXICON TV
 
-itta:itta SUBJ_AGR ; ! to see
+itta:itta Subj_Agr ; ! to see
 
