@@ -1,11 +1,12 @@
 Alphabet
 
-a e i o p t qu c tz ch tl cu uc m n s z x y hu uh l
-A E I O P T Qu C Tz Ch Tl Cu Uc M N S Z X Y Hu Uh L
+a e i o h p t qu c tz ch tl cu uc m n s z x y hu uh l
+A E I O h P T Qu C Tz Ch Tl Cu Uc M N S Z X Y Hu Uh L
 %{a%}:a %{a%}:0
 %{e%}:e %{e%}:0
 %{i%}:i %{i%}:0
 %{o%}:o %{o%}:0
+%{h%}:h %{h%}:0
 %{m%}:m %{m%}:n
 %{l%}:l %{l%}:0
 %{t%}:t %{t%}:0
@@ -25,7 +26,10 @@ Rules
 "Prefix nasal assimilation to stem cns place"
 %{m%}:m <=> %> a _ %>: [m|p] ;
 
-"Nonsurface a in base 3 stem for future"
-%{a%}:0 <=> [i|o] _ %> z %> ;
+"Nonsurface a in base 3 stem for future and passive"
+%{a%}:0 <=> [i|o]_%>z%> ;
+			     [i|o]_%>lo%> ;
+
+
 
 
