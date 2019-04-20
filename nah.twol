@@ -14,7 +14,9 @@ A E I O H P T Qu C Tz Ch Tl Cu Uc M N S Z X Y Hu Uh L
 
 Sets
 
-Cns = h p t qu c tz ch tl m n s z x y l ;
+Vows = a e i o ;
+
+Cns = h p t qu c tz ch tl cu uc m n s z x y hu uh l ;
 
 Rules
 
@@ -24,23 +26,13 @@ Rules
 "Remove t from absolutive in stems ending in l"
 t:0 <=> l %>: _ l i ;
 
-"Remove o from possessive prefix when stem starts with vowel"
-o:0 <=>: _ %>: [a|e|i|o] ;
-
-"Remove possessive suffix before possessive plural suffix and after consonants" ! doesn't work
-uh:0 <=>: %> _ %> h u a n ;
-			Cns: %> _ ;
-
-"Remove i from 2nd person sg and 1st person pl when stem starts with a vowel"
-%{i%}:0 <=> %>: t _ %>: [a|e|i|o] ;
+"Remove i from 2nd person sg and 1st person pl regular prefixes, and 2nd person sg in optative when stem starts with a vowel"
+%{i%}:0 <=> %>: [t|n|x] _ %>: [a|e|i|o] ;
 
 "Prefix nasal assimilation to stem cns place"
-%{m%}:m <=> %> a _ %>: [m|p] ;
+%{m%}:m <=> %>: a _ %>: [m|p] ;
 
-"Nonsurface a in base 3 stem for future and passive"
-%{a%}:0 <=> [i|o]_%>z%> ;
-			     [i|o]_%>lo%> ;
-
-
-
-
+"Nonsurface a in base 3 stem for future and passive; drop also for base 2 for preterite"
+%{a%}:0 <=> [i|o] _ %>: z %>: ;
+			     [i|o] _ %>: lo ;
+			     %>: o %>: [Cns|Vows|%>:]+ _ ;
