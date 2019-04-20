@@ -8,11 +8,15 @@ Multichar_Symbols
 
 %<tv%> ! Transitive Verb
 
+%<prn%> ! Pronoun
+
 %<pres%> !Present Tense
 
 %<futr%>
 
 %<hon%> ! honorific
+
+%<lf%> ! long form
 
 %<pass%> !Passive voice
 %<ia_ip%> !inanimate impersonal
@@ -86,6 +90,7 @@ LEXICON Root
 Nouns ;
 Subj_Pref ;
 Irreg_V ;
+Pronoun ;
 Other ;
 
 LEXICON N_TL
@@ -230,7 +235,6 @@ cihua:cihua N_TL ; ! woman
 tlaca:tlaca N_TL ; ! person
 xonaca:xonaca N_TL ; ! onion
 xihui:xihui N_TL ; ! turquoise, year, comet, herb
-yehua:yehua N_TL ; ! he, she, it
 a:a N_TL ; ! water
 izta:izta N_TL ; ! salt
 altepe:altepe N_TL ; ! city, town
@@ -240,6 +244,11 @@ ama:ama N_TL ; ! paper, amate
 tle:tle N_TL ; ! fire
 xitoma:xitoma N_TL ; ! tomato
 naca:naca N_TL ; ! meat
+pitzochiyahuizo:pitzochiyahuizo N_TL ; ! butter
+chiquihui:chiquihui N_TL ; ! basket
+e:e N_TL ; ! beans
+ihui:ihui N_TL ! feathers, down
+teoxihui:teoxihui N_TL ! fine turquoise
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -268,8 +277,6 @@ tom:tom # ; ! money
 chichi:chichi N_NULL ; ! dog
 kilo:kilo N_NULL ; ! kilo
 
-
-! yehuatl is he, she, it
 
 
 LEXICON Verbs
@@ -361,12 +368,31 @@ LEXICON COME_CONJ
 %<pres%>%<s_pl2%>: anhuitze%{h%} # ;
 %<pres%>%<s_pl3%>: huitze%{h%} # ;
 
+LEXICON Pronoun
+
+ne:ne PrnSuffix ; ! 1st person sing
+te:te PrnSuffix ; ! 2nd person sing
+ye:ye PrnSuffix ; ! 3rd person sing
+
+tehuan:tehuan # ; ! 1st person pl
+amehuan:amehuan PrnPlSuffix ; ! 2nd person pl
+yehuan:yehuan PrnPlSuffix ; ! 3rd person pl
+nehuantin:nehuantin # ; ! 1st person pl long form
+
+LEXICON PrnSuffix ! long form emphatic pronouns
+
+%<prn%>: %> # ;
+%<prn%>%<lf%>:%>hua ABS_TL ;
+
+LEXICON PrnPlSuffix ! long form emphatic plural pronouns
+%<prn%>: %> # ;
+%<prn%>%<lf%>: %>tin # ;
+
 
 LEXICON Other
 
 in:in # ; ! article, in a way
 ihuan:ihuan # ; ! and
-ye:ye # ; ! already
 auh:auh # ; ! and
 ica:ica # ; ! because of him
 zan:zan # ; ! only
@@ -383,10 +409,13 @@ ihcuac:ihcuac # ; ! at that time, when/while
 cualli:cualli # ; ! good
 ompa:ompa # ; ! here, there
 tlen:tlen # ; ! what
+on:on # ; ! that (demonstrative)
 inin:inin # ; ! this
+no:no # ; ! also
 oc:oc # ; ! still
 oncan:oncan # ; ! here, there, at that time
 nican:nican # ; ! here
+intla:intla # ; ! if, however
 itlan:itlan # ; ! near it, next to it
 ome:ome # ; ! two, both, couple
 cenca:cenca # ; ! very
@@ -396,10 +425,11 @@ quenin:quenin # ; ! how
 mah:mah # ; ! that, which
 hueyi:hueyi # ; ! large
 huan:huan # ; ! you
-!!!!!!!!!!!!!!!!!!!!! jennifer probably include this?
 ipampa:ipama # ; ! on behalf of, why, because
 miac:miac # ; ! much, a lot
 ahnozo:ahnozo # ; ! or (i think)
+nozo:nozo # ; ! or
+nochi:nochi # ; ! all, everything, everyone
 tla:tla # ; ! if
 de:de # ; ! of
 inon:inon # ; ! this
