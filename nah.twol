@@ -12,6 +12,10 @@ A E I O H P T Qu C Tz Ch Tl Cu Uc M N S Z X Y Hu Uh L
 %{t%}:t %{t%}:0
 ;
 
+Sets
+
+Cns = h p t qu c tz ch tl m n s z x y l ;
+
 Rules
 
 "Remove morpheme boundary"
@@ -19,6 +23,13 @@ Rules
 
 "Remove t from absolutive in stems ending in l"
 t:0 <=> l %>: _ l i ;
+
+"Remove o from possessive prefix when stem starts with vowel"
+o:0 <=>: _ %>: [a|e|i|o] ;
+
+"Remove possessive suffix before possessive plural suffix and after consonants" ! doesn't work
+uh:0 <=>: %> _ %> h u a n ;
+			Cns: %> _ ;
 
 "Remove i from 2nd person sg and 1st person pl when stem starts with a vowel"
 %{i%}:0 <=> %>: t _ %>: [a|e|i|o] ;

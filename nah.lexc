@@ -10,6 +10,13 @@ Multichar_Symbols
 
 %<prn%> ! Pronoun
 
+%<poss_sg1%> ! Possessive 1st person singular
+%<poss_sg2%>
+%<poss_sg3%>
+%<poss_pl1%>
+%<poss_pl2%>
+%<poss_pl3%>
+
 %<pres%> !Present Tense
 
 %<futr%>
@@ -74,6 +81,22 @@ Multichar_Symbols
 @R.Object.pl2@
 @R.Object.pl3@
 
+@P.Poss.1pSg@
+@P.Poss.2pSg@
+@P.Poss.3pSg@
+@P.Poss.1pPl@
+@P.Poss.2pPl@
+@P.Poss.3pPl@
+
+@R.Poss.1pSg@
+@R.Poss.2pSg@
+@R.Poss.3pSg@
+@R.Poss.1pPl@
+@R.Poss.2pPl@
+@R.Poss.3pPl@
+
+
+
 
 %> ! Morpheme boundary
 
@@ -87,7 +110,7 @@ Multichar_Symbols
 
 LEXICON Root
 
-Nouns ;
+Poss_Pref ;
 Subj_Pref ;
 Irreg_V ;
 Pronoun ;
@@ -96,53 +119,72 @@ Other ;
 LEXICON N_TL
 
 %<n%>: ABS_TL ;
-%<n%>: PLURAL ;
 
 LEXICON ABS_TL
 
-# ;
+Poss_Suff ;
 %<abs%> : %>tl # ;
 
 LEXICON N_TLI
 
 %<n%>: ABS_TLI ;
-%<n%>: PLURAL ;
 
 LEXICON ABS_TLI
 
-# ;
+Poss_Suff ;
 %<abs%> : %>tli # ;
 
 LEXICON N_IN
 
 %<n%>: ABS_IN ;
-%<n%>: PLURAL ;
 
 LEXICON ABS_IN
 
+Poss_Suff ;
 %<abs%> : %>in # ;
 
 LEXICON N_NULL
 
 %<n%> : ABS_NULL ;
-%<n%>: PLURAL ;
 
 LEXICON ABS_NULL
 
-# ;
+Poss_Suff ;
 
 LEXICON PLURAL
-
 # ;
 %<pl%>:%>h # ; ! after vowels
 %<pl%>:%>me # ; ! after both
 %<pl%>:%>tin # ; ! after consonants
-%<pl%>:%>huan # ; ! possessive form
 
 LEXICON Honorific ! have to figure out how to implement this
 
 %<hon%>:%>tzin ABS_TLI ; ! honorific/diminutive suffix
 %<hon%>:%>tzin # ;
+
+LEXICON Poss_Pref
+
+Nouns ;
+@P.Poss.1pSg@:@P.Poss.1pSg@no%> Nouns ;
+@P.Poss.2pSg@:@P.Poss.2pSg@mo%> Nouns ;
+@P.Poss.3pSg@:@P.Poss.3pSg@i%> Nouns ;
+@P.Poss.1pPl@:@P.Poss.1pPl@to%> Nouns ;
+@P.Poss.2pPl@:@P.Poss.2pPl@amo%> Nouns ;
+@P.Poss.3pPl@:@P.Poss.3pPl@im%> Nouns ;
+
+LEXICON Poss_Suff
+PLURAL ;
+@R.Poss.1pSg@%<poss_sg1%>:@R.Poss.1pSg@%>uh Poss_Pl ;
+@R.Poss.2pSg@%<poss_sg2%>:@R.Poss.2pSg@%>uh Poss_Pl ;
+@R.Poss.3pSg@%<poss_sg3%>:@R.Poss.3pSg@%>uh Poss_Pl ;
+@R.Poss.1pPl@%<poss_pl1%>:@R.Poss.1pPl@%>uh Poss_Pl ;
+@R.Poss.2pPl@%<poss_pl2%>:@R.Poss.2pPl@%>uh Poss_Pl ;
+@R.Poss.3pPl@%<poss_pl3%>:@R.Poss.3pPl@%>uh Poss_Pl ;
+
+LEXICON Poss_Pl
+
+# ;
+%<pl%>:%>huan # ; ! possessive plural suffix
 
 LEXICON Subj_Pref
 
@@ -243,12 +285,16 @@ cuahui:cuahui N_TL ; ! tree, wood, stick
 ama:ama N_TL ; ! paper, amate
 tle:tle N_TL ; ! fire
 xitoma:xitoma N_TL ; ! tomato
+toma:toma N_TL ; ! tomato
 naca:naca N_TL ; ! meat
 pitzochiyahuizo:pitzochiyahuizo N_TL ; ! butter
 chiquihui:chiquihui N_TL ; ! basket
 e:e N_TL ; ! beans
-ihui:ihui N_TL ! feathers, down
-teoxihui:teoxihui N_TL ! fine turquoise
+ihui:ihui N_TL ; ! feathers, down
+teoxihui:teoxihui N_TL ; ! fine turquoise
+cone:cone N_TL ; ! child
+cozca:cozca N_TL ; ! necklace
+teo:teo N_TL ; ! god
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -258,6 +304,8 @@ noch:noch N_TLI ; ! prickly pear
 metz:metz N_TLI ; ! moon, month
 tex:tex N_TLI ; ! mass
 oh:oh N_TLI ; ! street
+tepoz:tepoz N_TLI ; ! iron, copper
+cuauh:cuauh N_TLI ; ! eagle
 
 pil:pil N_TLI ; ! child/nobleman
 cal:cal N_TLI ; ! house
@@ -266,6 +314,9 @@ chil:chil N_TLI ; ! chili pepper
 nohpal:nohpal N_TLI ; ! prickly pear cactus
 tlacual:tlacual N_TLI ; ! food
 tlal:tlal N_TLI ; ! earth, land
+icpal:icpal N_TLI ; ! seat
+pinol:pinol N_TLI ; ! pinole
+tlaol:tlaol N_TLI ; ! corn
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
