@@ -10,6 +10,26 @@ Multichar_Symbols
 
 %<prn%> ! Pronoun
 
+%<lf%> ! long form
+
+%<art%> ! article
+%<conj%> ! conjunction
+%<part%> ! particle
+%<prep%> ! preposition
+%<adv%> ! adverb
+%<adj%> ! adjective
+%<dem%> ! demonstrative
+%<quant%> ! quantifier
+%<interrog%> ! interrogative
+%<pr_n%> ! proper noun
+
+%<poss_sg1%> ! Possessive 1st person singular
+%<poss_sg2%>
+%<poss_sg3%>
+%<poss_pl1%>
+%<poss_pl2%>
+%<poss_pl3%>
+
 %<pres%> !Present Tense
 
 %<futr%> ! Future Tense
@@ -78,6 +98,19 @@ Multichar_Symbols
 @R.Object.pl2@
 @R.Object.pl3@
 
+@P.Poss.1pSg@
+@P.Poss.2pSg@
+@P.Poss.3pSg@
+@P.Poss.1pPl@
+@P.Poss.2pPl@
+@P.Poss.3pPl@
+
+@R.Poss.1pSg@
+@R.Poss.2pSg@
+@R.Poss.3pSg@
+@R.Poss.1pPl@
+@R.Poss.2pPl@
+@R.Poss.3pPl@
 
 %> ! Morpheme boundary
 
@@ -91,7 +124,7 @@ Multichar_Symbols
 
 LEXICON Root
 
-Nouns ;
+Poss_Pref ;
 IVSubj_Pref ;
 IVTense_Pref ;
 TVTense_Pref ;
@@ -102,40 +135,37 @@ Other ;
 LEXICON N_TL
 
 %<n%>: ABS_TL ;
-%<n%>: PLURAL ;
 
 LEXICON ABS_TL
 
-# ;
+Poss_Suff ;
 %<abs%> : %>tl # ;
 
 LEXICON N_TLI
 
 %<n%>: ABS_TLI ;
-%<n%>: PLURAL ;
 
 LEXICON ABS_TLI
 
-# ;
+Poss_Suff ;
 %<abs%> : %>tli # ;
 
 LEXICON N_IN
 
 %<n%>: ABS_IN ;
-%<n%>: PLURAL ;
 
 LEXICON ABS_IN
 
+Poss_Suff ;
 %<abs%> : %>in # ;
 
 LEXICON N_NULL
 
 %<n%> : ABS_NULL ;
-%<n%>: PLURAL ;
 
 LEXICON ABS_NULL
 
-# ;
+Poss_Suff ;
 
 LEXICON PLURAL
 
@@ -143,7 +173,30 @@ LEXICON PLURAL
 %<pl%>:%>h # ; ! after vowels
 %<pl%>:%>me # ; ! after both
 %<pl%>:%>tin # ; ! after consonants
-%<pl%>:%>huan # ; ! possessive form
+
+LEXICON Poss_Pref
+
+Nouns ;
+@P.Poss.1pSg@:@P.Poss.1pSg@no%> Nouns ;
+@P.Poss.2pSg@:@P.Poss.2pSg@mo%> Nouns ;
+@P.Poss.3pSg@:@P.Poss.3pSg@i%> Nouns ;
+@P.Poss.1pPl@:@P.Poss.1pPl@to%> Nouns ;
+@P.Poss.2pPl@:@P.Poss.2pPl@amo%> Nouns ;
+@P.Poss.3pPl@:@P.Poss.3pPl@im%> Nouns ;
+
+LEXICON Poss_Suff
+PLURAL ;
+@R.Poss.1pSg@%<poss_sg1%>:@R.Poss.1pSg@%>uh Poss_Pl ;
+@R.Poss.2pSg@%<poss_sg2%>:@R.Poss.2pSg@%>uh Poss_Pl ;
+@R.Poss.3pSg@%<poss_sg3%>:@R.Poss.3pSg@%>uh Poss_Pl ;
+@R.Poss.1pPl@%<poss_pl1%>:@R.Poss.1pPl@%>uh Poss_Pl ;
+@R.Poss.2pPl@%<poss_pl2%>:@R.Poss.2pPl@%>uh Poss_Pl ;
+@R.Poss.3pPl@%<poss_pl3%>:@R.Poss.3pPl@%>uh Poss_Pl ;
+
+LEXICON Poss_Pl
+
+# ;
+%<pl%>:%>huan # ; ! possessive plural suffix
 
 LEXICON Honorific ! have to figure out how to implement this
 
@@ -266,6 +319,14 @@ chiquihui:chiquihui N_TL ; ! basket
 e:e N_TL ; ! beans
 ihui:ihui N_TL ; ! feathers, down
 teoxihui:teoxihui N_TL ; ! fine turquoise
+cone:cone N_TL ; ! child
+cozca:cozca N_TL ; ! necklace
+teo:teo N_TL ; ! god
+cahui:cahui N_TL ; ! time
+cuica:cuica N_TL ; ! song
+yao:yao N_TL ; ! enemy
+yaoyo:yaoyo N_TL ; ! war
+coyo:coyo N_TL ; ! coyote
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -275,6 +336,9 @@ noch:noch N_TLI ; ! prickly pear
 metz:metz N_TLI ; ! moon, month
 tex:tex N_TLI ; ! mass
 oh:oh N_TLI ; ! street
+tepoz:tepoz N_TLI ; ! iron, copper
+cuauh:cuauh N_TLI ; ! eagle
+pilton:pilton N_TLI ; ! boy
 
 pil:pil N_TLI ; ! child/nobleman
 cal:cal N_TLI ; ! house
@@ -283,6 +347,10 @@ chil:chil N_TLI ; ! chili pepper
 nohpal:nohpal N_TLI ; ! prickly pear cactus
 tlacual:tlacual N_TLI ; ! food
 tlal:tlal N_TLI ; ! earth, land
+icpal:icpal N_TLI ; ! seat
+pinol:pinol N_TLI ; ! pinole
+tlaol:tlaol N_TLI ; ! corn
+cihuapil:cihuapil N_TLI ; ! noblewoman
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -296,7 +364,6 @@ kilo:kilo N_NULL ; ! kilo
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-coyotl:coyotl # ; ! coyote
 jesucristo:jesucristo # ; ! Jesus Christ from Spanish
 
 LEXICON Verbs
@@ -425,57 +492,57 @@ LEXICON PrnPlSuffix ! long form emphatic plural pronouns
 
 LEXICON Other
 
-in:in # ; ! article, in a way
-ihuan:ihuan # ; ! and
-auh:auh # ; ! and
-iyo:iyo # ; ! only
+in%<art%>:in # ; ! article, in a way
+ihuan%<conj%>:ihuan # ; ! and
+auh%<conj%>:auh # ; ! and
+iyo%<part%>:iyo # ; ! only
 ica:ica # ; ! because of him
-zan:zan # ; ! only
-ic:ic # ; ! by means of
-ipan:ipan # ; ! in it, on it
-huel:huel # ; ! truly, much
-niman:niman # ; ! extremely
+zan%<part%>:zan # ; ! only
+ic%<part%>:ic # ; ! by means of
+ipan%<prep%>:ipan # ; ! in it, on it
+huel%<adv%>:huel # ; ! truly, much
+niman%<part%>:niman # ; ! then
 amo:amo # ; ! no
 ahmo:ahmo # ; ! no, not
-ce:ce # ; ! article, "a"
+ce%<art%>:ce # ; ! article, "a"
 inic:inic # ; ! for this person, for this reason
 ma:ma # ; ! let, may (before verb)
-ihcuac:ihcuac # ; ! at that time, when/while
-cualli:cualli # ; ! good
-ompa:ompa # ; ! here, there
+ihcuac%<adv%>:ihcuac # ; ! at that time, when/while
+cualli%<adj%>:cualli # ; ! good
+ompa%<adv%>:ompa # ; ! here, there
 tlen:tlen # ; ! what
-on:on # ; ! that (demonstrative)
+on%<dem%>:on # ; ! that (demonstrative)
 inin:inin # ; ! this
-no:no # ; ! also
-oc:oc # ; ! still
-oncan:oncan # ; ! here, there, at that time
-nican:nican # ; ! here
-intla:intla # ; ! if, however
+no:no%<part%> # ; ! also
+oc:oc%<part%> # ; ! still
+oncan%<adv%>:oncan # ; ! here, there, at that time
+nican%<adv%>:nican # ; ! here
+intla%<conj%>:intla # ; ! if, however
 itlan:itlan # ; ! near it, next to it
 ome:ome # ; ! two, both, couple
-cenca:cenca # ; ! very
+cenca%<adv%>:cenca # ; ! very
 itech:itech # ; ! in, on, during
-ixquich:ixquich # ; ! all, enough
-quenin:quenin # ; ! how
+ixquich%<quant%>:ixquich # ; ! all, enough
+quenin%<interrog%>:quenin # ; ! how
 mah:mah # ; ! that, which
-hueyi:hueyi # ; ! large
-huan:huan # ; ! you
+hueyi%<quant%>:hueyi # ; ! large
+huan%<prn%>:huan # ; ! you
 ipampa:ipama # ; ! on behalf of, why, because
-miac:miac # ; ! much, a lot
-ahnozo:ahnozo # ; ! or (i think)
-nozo:nozo # ; ! or
+miac%<quant%>:miac # ; ! much, a lot
+ahnozo%<conj%>:ahnozo # ; ! or (i think)
+nozo%<conj%>:nozo # ; ! or
 nochi:nochi # ; ! all, everything, everyone
 tla:tla # ; ! if
 de:de # ; ! of
-inon:inon # ; ! this
-axcan:axcan # ; ! now
+inon%<dem%>:inon # ; ! this
+axcan%<adv%>:axcan # ; ! now
 campa:campa # ; ! where
-tepitzin:tepitzin # ; ! a little bit
-e:e # ; ! particle
-maria:maria # ; ! Mary
-pedro:pedro # ; ! Pedro
-pablo:pablo # ; ! Pablo
-luis:luis # ; ! Luis
-julio:julio # ; ! Julio
-sanchez:sanchez # ; ! Sanchez
+tepitzin%<quant%>:tepitzin # ; ! a little bit
+e%<part%>:e # ; ! particle
+maria%<pr_n%>:maria # ; ! Mary
+pedro%<pr_n%>:pedro # ; ! Pedro
+pablo%<pr_n%>:pablo # ; ! Pablo
+luis%<pr_n%>:luis # ; ! Luis
+julio%<pr_n%>:julio # ; ! Julio
+sanchez%<pr_n%>:sanchez # ; ! Sanchez
 francisco:francisco # ; ! Francis
