@@ -513,8 +513,8 @@ ompa%<adv%>:ompa # ; ! here, there
 tlen:tlen # ; ! what
 on%<dem%>:on # ; ! that (demonstrative)
 inin:inin # ; ! this
-no:no%<part%> # ; ! also
-oc:oc%<part%> # ; ! still
+no%<part%>:no # ; ! also
+oc%<part%>:oc # ; ! still
 oncan%<adv%>:oncan # ; ! here, there, at that time
 nican%<adv%>:nican # ; ! here
 intla%<conj%>:intla # ; ! if, however
