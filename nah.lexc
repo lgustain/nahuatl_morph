@@ -10,16 +10,13 @@ Multichar_Symbols
 
 %<prn%> ! Pronoun
 
-%<poss_sg1%> ! Possessive 1st person singular
-%<poss_sg2%>
-%<poss_sg3%>
-%<poss_pl1%>
-%<poss_pl2%>
-%<poss_pl3%>
-
 %<pres%> !Present Tense
 
-%<futr%>
+%<futr%> ! Future Tense
+
+%<opt%> ! optative
+
+%<pret%> ! preterite
 
 %<hon%> ! honorific
 
@@ -81,22 +78,6 @@ Multichar_Symbols
 @R.Object.pl2@
 @R.Object.pl3@
 
-@P.Poss.1pSg@
-@P.Poss.2pSg@
-@P.Poss.3pSg@
-@P.Poss.1pPl@
-@P.Poss.2pPl@
-@P.Poss.3pPl@
-
-@R.Poss.1pSg@
-@R.Poss.2pSg@
-@R.Poss.3pSg@
-@R.Poss.1pPl@
-@R.Poss.2pPl@
-@R.Poss.3pPl@
-
-
-
 
 %> ! Morpheme boundary
 
@@ -110,8 +91,10 @@ Multichar_Symbols
 
 LEXICON Root
 
-Poss_Pref ;
-Subj_Pref ;
+Nouns ;
+IVSubj_Pref ;
+IVTense_Pref ;
+TVTense_Pref ;
 Irreg_V ;
 Pronoun ;
 Other ;
@@ -119,74 +102,55 @@ Other ;
 LEXICON N_TL
 
 %<n%>: ABS_TL ;
+%<n%>: PLURAL ;
 
 LEXICON ABS_TL
 
-Poss_Suff ;
+# ;
 %<abs%> : %>tl # ;
 
 LEXICON N_TLI
 
 %<n%>: ABS_TLI ;
+%<n%>: PLURAL ;
 
 LEXICON ABS_TLI
 
-Poss_Suff ;
+# ;
 %<abs%> : %>tli # ;
 
 LEXICON N_IN
 
 %<n%>: ABS_IN ;
+%<n%>: PLURAL ;
 
 LEXICON ABS_IN
 
-Poss_Suff ;
 %<abs%> : %>in # ;
 
 LEXICON N_NULL
 
 %<n%> : ABS_NULL ;
+%<n%>: PLURAL ;
 
 LEXICON ABS_NULL
 
-Poss_Suff ;
+# ;
 
 LEXICON PLURAL
+
 # ;
 %<pl%>:%>h # ; ! after vowels
 %<pl%>:%>me # ; ! after both
 %<pl%>:%>tin # ; ! after consonants
+%<pl%>:%>huan # ; ! possessive form
 
 LEXICON Honorific ! have to figure out how to implement this
 
 %<hon%>:%>tzin ABS_TLI ; ! honorific/diminutive suffix
 %<hon%>:%>tzin # ;
 
-LEXICON Poss_Pref
-
-Nouns ;
-@P.Poss.1pSg@:@P.Poss.1pSg@no%> Nouns ;
-@P.Poss.2pSg@:@P.Poss.2pSg@mo%> Nouns ;
-@P.Poss.3pSg@:@P.Poss.3pSg@i%> Nouns ;
-@P.Poss.1pPl@:@P.Poss.1pPl@to%> Nouns ;
-@P.Poss.2pPl@:@P.Poss.2pPl@amo%> Nouns ;
-@P.Poss.3pPl@:@P.Poss.3pPl@im%> Nouns ;
-
-LEXICON Poss_Suff
-PLURAL ;
-@R.Poss.1pSg@%<poss_sg1%>:@R.Poss.1pSg@%>uh Poss_Pl ;
-@R.Poss.2pSg@%<poss_sg2%>:@R.Poss.2pSg@%>uh Poss_Pl ;
-@R.Poss.3pSg@%<poss_sg3%>:@R.Poss.3pSg@%>uh Poss_Pl ;
-@R.Poss.1pPl@%<poss_pl1%>:@R.Poss.1pPl@%>uh Poss_Pl ;
-@R.Poss.2pPl@%<poss_pl2%>:@R.Poss.2pPl@%>uh Poss_Pl ;
-@R.Poss.3pPl@%<poss_pl3%>:@R.Poss.3pPl@%>uh Poss_Pl ;
-
-LEXICON Poss_Pl
-
-# ;
-%<pl%>:%>huan # ; ! possessive plural suffix
-
-LEXICON Subj_Pref
+LEXICON IVSubj_Pref
 
 @U.Subject.sg1@ : @U.Subject.sg1@%>n%{i%}%> Verbs ;
 @U.Subject.sg2@ : @U.Subject.sg2@%>t%{i%}%> Verbs ;
@@ -202,6 +166,16 @@ LEXICON Subj_Pref
 @U.Subject.pl1@ : @U.Subject.pl1@%>t%{i%}%> Obj_Pref ;
 @U.Subject.pl2@ : @U.Subject.pl2@%>a%{m%}%> Obj_Pref ;
 @U.Subject.pl3@ : @U.Subject.pl3@%> Obj_Pref ;
+
+LEXICON IVTense_Pref
+
+%<pret%>: %>o%> IVSubj_Pref ;
+%<opt%>%<s_sg2%>: %>x%{i%}%> Verbs ;
+
+LEXICON TVTense_Pref
+
+%<pret%>: %>o%> IVSubj_Pref ;
+%<opt%>%<s_sg2%>: %>x%{i%}%> Verbs ;
 
 LEXICON Obj_Pref
 
@@ -223,6 +197,7 @@ LEXICON IVTenses
 
 %<pres%> : %> IVSubj_Agr ; 
 %<futr%> : %>z%> IVSubj_Agr ;
+ IVSubj_Agr ;
 
 LEXICON IVSubj_Agr
 
@@ -285,16 +260,12 @@ cuahui:cuahui N_TL ; ! tree, wood, stick
 ama:ama N_TL ; ! paper, amate
 tle:tle N_TL ; ! fire
 xitoma:xitoma N_TL ; ! tomato
-toma:toma N_TL ; ! tomato
 naca:naca N_TL ; ! meat
 pitzochiyahuizo:pitzochiyahuizo N_TL ; ! butter
 chiquihui:chiquihui N_TL ; ! basket
 e:e N_TL ; ! beans
 ihui:ihui N_TL ; ! feathers, down
 teoxihui:teoxihui N_TL ; ! fine turquoise
-cone:cone N_TL ; ! child
-cozca:cozca N_TL ; ! necklace
-teo:teo N_TL ; ! god
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -304,8 +275,6 @@ noch:noch N_TLI ; ! prickly pear
 metz:metz N_TLI ; ! moon, month
 tex:tex N_TLI ; ! mass
 oh:oh N_TLI ; ! street
-tepoz:tepoz N_TLI ; ! iron, copper
-cuauh:cuauh N_TLI ; ! eagle
 
 pil:pil N_TLI ; ! child/nobleman
 cal:cal N_TLI ; ! house
@@ -314,9 +283,6 @@ chil:chil N_TLI ; ! chili pepper
 nohpal:nohpal N_TLI ; ! prickly pear cactus
 tlacual:tlacual N_TLI ; ! food
 tlal:tlal N_TLI ; ! earth, land
-icpal:icpal N_TLI ; ! seat
-pinol:pinol N_TLI ; ! pinole
-tlaol:tlaol N_TLI ; ! corn
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
@@ -328,7 +294,10 @@ tom:tom # ; ! money
 chichi:chichi N_NULL ; ! dog
 kilo:kilo N_NULL ; ! kilo
 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+coyotl:coyotl # ; ! coyote
+jesucristo:jesucristo # ; ! Jesus Christ from Spanish
 
 LEXICON Verbs
 
@@ -343,13 +312,13 @@ iza:iza IVTenses ; ! to wake up
 mayana:mayana IVTenses ; ! to be hungry
 miqui:miqui IVTenses ; ! to die
 mixihui:mixihui IVTenses ; ! to give birth
-nehnemi:nehnemi IVTenses ; ! to walk
+nehnemi:nehne%{m%}%{i%} IVTenses ; ! to walk
 nemi:nemi IVTenses ; ! to live
 olini:olini IVTenses ; ! to move
 pozoni:pozoni IVTenses ; ! to boil
 quiza:quiza IVTenses ; ! to emerge, to pass by
 temo:temo IVTenses ; ! to come down, to descend
-tlami:tlami IVTenses ; ! to end, to finish
+tlami:tla%{m%}%{i}% IVTenses ; ! to end, to finish
 tlatla:tlatla IVTenses ; ! to burn, to be on fire
 tlacati:tlacati IVTenses ; ! to be born
 tlahuana:tlahuana IVTenses ; ! to get drunk
@@ -381,16 +350,18 @@ quimiloa:quimilo%{a%} TV_Tenses ; ! to wrap
 teci:tec%{i%} TV_Tenses ; ! to grind
 tema:te%{m%}%{a%} TV_Tenses ; ! to put
 tequi:tequi TV_Tenses ; ! to cut
-tlahcuiloa:tlahcuilo%{a%} TV_Tenses ; ! to write
+tlahcuiloa:tla%{h%}cuilo%{a%} TV_Tenses ; ! to write
 tlalia:tlali%{a%} TV_Tenses ; ! to put
 tlamati:tlamat%{i%} TV_Tenses ; ! to know
 tlani:tlan%{i%} TV_Tenses ; ! to win
+tlazotla:tlazo%{h%}tla TV_Tenses ; ! to love
 yocoya:yocoya TV_Tenses ; ! to make
 
 LEXICON Irreg_V
 
 %<to_be%>:  BE_CONJ ;
 %<to_go%>: GO_CONJ ;
+%<to_come%>: COME_CONJ ;
 
 LEXICON BE_CONJ
 
@@ -401,6 +372,12 @@ LEXICON BE_CONJ
 %<pres%>%<s_pl2%>: ancate%{h%} # ;
 %<pres%>%<s_pl3%>: cate%{h%} # ;
 
+%<opt%>%<s_sg2%>: xiye # ;
+%<opt%>%<s_pl2%>: xihuiyan # ;
+
+%<pret%>%<s_sg3%>: ocatca # ;
+%<pret%>%<s_pl3%>: ocatca%{h%} # ;
+
 LEXICON GO_CONJ
 
 %<pres%>%<s_sg1%>: niyauh # ;
@@ -409,6 +386,12 @@ LEXICON GO_CONJ
 %<pres%>%<s_pl1%>: tihui%{h%} # ;
 %<pres%>%<s_pl2%>: anhui%{h%} # ;
 %<pres%>%<s_pl3%>: hui%{h%} # ;
+
+%<opt%>%<s_sg2%>: xiyauh # ;
+%<opt%>%<s_pl2%>: xihuiyan # ;
+
+%<pret%>%<s_sg3%>: oya # ;
+%<pret%>%<s_pl3%>: oyaque%{h%} # ;
 
 LEXICON COME_CONJ
 
@@ -445,6 +428,7 @@ LEXICON Other
 in:in # ; ! article, in a way
 ihuan:ihuan # ; ! and
 auh:auh # ; ! and
+iyo:iyo # ; ! only
 ica:ica # ; ! because of him
 zan:zan # ; ! only
 ic:ic # ; ! by means of
@@ -487,3 +471,11 @@ inon:inon # ; ! this
 axcan:axcan # ; ! now
 campa:campa # ; ! where
 tepitzin:tepitzin # ; ! a little bit
+e:e # ; ! particle
+maria:maria # ; ! Mary
+pedro:pedro # ; ! Pedro
+pablo:pablo # ; ! Pablo
+luis:luis # ; ! Luis
+julio:julio # ; ! Julio
+sanchez:sanchez # ; ! Sanchez
+francisco:francisco # ; ! Francis
